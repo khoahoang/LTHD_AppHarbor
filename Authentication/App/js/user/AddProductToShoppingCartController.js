@@ -1,7 +1,7 @@
 ﻿mobileStoreApp.controller('AddProductToShoppingCartController', function ($scope, authService, shoppingService, $routeParams, $http) {
     var list = shoppingService.get();
 
-    $http.get("http://localhost:41127/api/product/getproduct?id=" + $routeParams.proId)
+    $http.get("http://mobilestore.apphb.com/api/product/getproduct?id=" + $routeParams.proId)
     .then(function (response) {
         list = shoppingService.them(response.data);
 
@@ -56,7 +56,7 @@
             }
             data.order_info = order;
 
-            $http.post('http://localhost:41127/api/orders/submit', data).then(function (response) {
+            $http.post('http://mobilestore.apphb.com/api/orders/submit', data).then(function (response) {
                 $scope.listProduct = shoppingService.clear();
                 $scope.All = 0;
                 $scope.name = "";
