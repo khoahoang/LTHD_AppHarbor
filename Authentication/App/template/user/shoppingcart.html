@@ -1,100 +1,75 @@
 <h2>Giỏ hàng của tui</h2>
 <div id="update-message"> </div>
-<table ng-show="count > 0">
-    <tr>
-        <th>
-            Model sản phẩm
-        </th>
-        <th>
-            Giá (1 sản phẩm)
-        </th>
-        <th>
-            Số lượng
-        </th>
-        <th>
-            Tổng
-        </th>
-        <th>
-            Chỉnh sửa
-        </th>
-    </tr>
-
-    <tr ng-repeat="x in listProduct">
-        <td>
-            <a href="index.html#/productdetail/{{x.ID}}">{{ x.ModelProduct }}</a>
-            <!--@Html.ActionLink(item.PRODUCT.MODEL, "Index", "ProductDetail", new { id = item.PRODUCT_ID }, null)-->
-        </td>
-        <td>
-            {{ x.PriceDouble | number }}
-            <!--@item.PRODUCT.PRICE-->
-        </td>
-        <!--<td id="item-count-@item.RECORD_ID">-->
-        <td>
-            {{ x.Quantity }}
-            <!--@item.COUNT-->
-        </td>
-        <td>
-            {{ x.Total | number }}
-        </td>
-        <td>
-            <button ng-click="TangSoLuong(x.ID)">  +  </button>
-            <button ng-click="GiamSoLuong(x.ID)">  -  </button>
-            <!-- <a href="#" class="RemoveLink" data-id="1" style="float:left; text-decoration:none">
-                ( - )
-            </a> -->
-            <!--<a href="#" class="RemoveLink" data-id="@item.RECORD_ID" style="float:left; text-decoration:none">
-                ( - )
-            </a>-->
-        </td>
-    </tr>
-    <tr>
-        <td colspan="4" style="text-align: right">
-            Tổng cộng: {{All | number}}
-        </td>
-    </tr>
-
-    <!--@foreach (var item in Model.CartItems)
-    {
-        <tr id="row-@item.RECORD_ID">
-            <td>
-                @Html.ActionLink(item.PRODUCT.MODEL, "Index", "ProductDetail", new { id = item.PRODUCT_ID }, null)
-            </td>
-            <td>
-                @item.PRODUCT.PRICE
-            </td>
-            <td id="item-count-@item.RECORD_ID">
-                @item.COUNT
-            </td>
-            <td>
-                <a href="#" class="RemoveLink" data-id="@item.RECORD_ID" style="float:left; text-decoration:none">
+<div class="container">
+    <table class="table" ng-show="count > 0">
+        <thead>
+            <tr>
+                <th>
+                    Model sản phẩm
+                </th>
+                <th>
+                    Giá (1 sản phẩm)
+                </th>
+                <th>
+                    Số lượng
+                </th>
+                <th>
+                    Tổng
+                </th>
+                <th>
+                    Chỉnh sửa
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in listProduct">
+                <td>
+                    <a href="index.html#/productdetail/{{x.ID}}">{{ x.ModelProduct }}</a>
+                    <!--@Html.ActionLink(item.PRODUCT.MODEL, "Index", "ProductDetail", new { id = item.PRODUCT_ID }, null)-->
+                </td>
+                <td>
+                    {{ x.PriceDouble | number }}
+                    <!--@item.PRODUCT.PRICE-->
+                </td>
+                <!--<td id="item-count-@item.RECORD_ID">-->
+                <td>
+                    {{ x.Quantity }}
+                    <!--@item.COUNT-->
+                </td>
+                <td>
+                    {{ x.Total | number }}
+                </td>
+                <td>
+                    <button ng-click="TangSoLuong(x.ID)">  +  </button>
+                    <button ng-click="GiamSoLuong(x.ID)">  -  </button>
+                    <!-- <a href="#" class="RemoveLink" data-id="1" style="float:left; text-decoration:none">
                     ( - )
-                </a>
-            </td>
-        </tr>
-    }
-    <tr>
-        <td>
-            Tổng
-        </td>
-        <td></td>
-        <td id="cart-total">
-            @Model.CartTotal
-        </td>
-        <td></td>
-    </tr>-->
+                </a> -->
+                    <!--<a href="#" class="RemoveLink" data-id="@item.RECORD_ID" style="float:left; text-decoration:none">
+                    ( - )
+                </a>-->
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: right">
+                    Tổng cộng: {{All | number}}
+                </td>
+            </tr>
+        </tbody>
 </table>
-<br />
-<p class="button">
-    <a ng-hide="count > 0">Giỏ hàng chưa có sản phẩm nào</a>
-    <div ng-show="count > 0">
-        <input style="width: 400px" ng-model="name" ng-hide="!authentication.isAuth" type="text" class="form-control" placeholder="Họ tên khách hàng" />
-        <br />
-        <input style="width: 400px" ng-model="addr" ng-hide="!authentication.isAuth" type="text" class="form-control" placeholder="Địa chỉ" />
-        <br />
-        <input style="width: 400px" ng-model="phone" ng-hide="!authentication.isAuth" type="text" class="form-control" placeholder="Số điện thoại" />
-        <br />
-        <button style="width: 400px" class="btn btn-lg btn-info btn-block" ng-hide="!authentication.isAuth" ng-click="ThanhToan()">Đặt hàng</button>
-        <a ng-hide="authentication.isAuth" href="#/login">Vui lòng đăng nhập để đặt hàng</a>
-        <!--@Html.ActionLink("Đặt hàng", "AddressAndOrder", "Order")-->
-    </div>
-</p>
+    <br />
+    <p class="button">
+        <a ng-hide="count > 0">Giỏ hàng chưa có sản phẩm nào</a>
+        <div ng-show="count > 0">
+            <input style="width: 400px" ng-model="name" ng-hide="!authentication.isAuth" type="text" class="form-control" placeholder="Họ tên khách hàng" />
+            <br />
+            <input style="width: 400px" ng-model="addr" ng-hide="!authentication.isAuth" type="text" class="form-control" placeholder="Địa chỉ" />
+            <br />
+            <input style="width: 400px" ng-model="phone" ng-hide="!authentication.isAuth" type="text" class="form-control" placeholder="Số điện thoại" />
+            <br />
+            <button style="width: 400px" class="btn btn-lg btn-info btn-block" ng-hide="!authentication.isAuth" ng-click="ThanhToan()">Đặt hàng</button>
+            <a ng-hide="authentication.isAuth" href="#/login">Vui lòng đăng nhập để đặt hàng</a>
+            <!--@Html.ActionLink("Đặt hàng", "AddressAndOrder", "Order")-->
+        </div>
+    </p>
+</div>

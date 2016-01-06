@@ -3,4 +3,8 @@ mobileStoreApp.controller('ProductDetailController', function ($scope, $routePar
     .then(function(response) {
       $scope.pro = response.data;
     });
+    $http.get("http://mobilestore.apphb.com/api/home")
+    .then(function (response) {
+        $scope.cat = response.data;
+    });
 })

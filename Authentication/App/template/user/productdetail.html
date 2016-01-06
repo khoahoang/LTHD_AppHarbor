@@ -112,43 +112,21 @@
         <div id="view1">
             <div class="cat">
                 <div class="cat-content">
-                    <div class="product">
-                        <img src="images/laptops/1381_0_dell_latitude_e7440_core_i7-120x120.jpg" alt="">
-                        <a href="laptop-details.html"><p class="product-name">Dell Latitude E7440 - 543008G500 / i5-4300U / 4x1.9GHz~2.9Ghz / 8GB DDR3 / 500GB HDD / NoDVD / VGA Onboard / 14.1" / Win8 Pro </p></a>
-                        <p class="price">26.990.000 VND </p>
+                    <div ng-repeat="y in cat[0].listProduct">
+                        <div class="product">
+                            <div class="product-img">
+                                <!-- <img src="@product.PRODUCT_IMG" alt=""> -->
+                                <img src="{{y.PRODUCT_IMG}}" alt="">
+                            </div>
+                            <div class="product-info">
+                                <!-- <a href="@Url.Action("Index", "ProductDetail", new { idProduct = @product.PRODUCT_ID })"> -->
+                                <a href="index.html#/productdetail/{{y.PRODUCT_ID}}">
+                                    <p class="product-name"><!-- @product.MODEL -->{{y.MODEL}}</p>
+                                </a>
+                                <p class="price"><!-- @product.PRICE -->{{y.PRICE | number}}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="product">
-                        <img src="images/laptops/laptop inspiron.jpg" alt="">
-                        <a href="laptop-details.html"><p class="product-name">Dell inspiron N7537- HAD70044441 / i5-4210U / 4x1.7GHz~2.7GHz / 6GB DDR3 / 500GB HDD / NoDVD / Nvidia Geforce GT 750M 2GB GDDR5 / 15.6" / FreeDOS </p></a>
-                        <p class="price">10.000.000 VND</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/laptops/HP_ENVY_15t-2-120x120.jpg" alt="">
-                        <a href="laptop-details.html"><p class="product-name">Hp Envy 15 - L1J71PA / i7-5500U / 4x2.4GHz~3.0GHz / 8GB DDR3 / 1TB HDD / NoDVD / Nvidia Geforce GT 840M 2GB / 15.6" / win8.1 </p></a>
-                        <p class="price">10.000.000 VND</p>
-                    </div>
-
-                    <div class="product">
-                        <img src="images/laptops/asusg751/5.jpg" alt="">
-                        <a href="laptop-details.html"><p class="product-name">Asus GL552JX - XO093D / i5-4200H / 4x2.8GHz~3.4GHz / 6GB DDR3 / 1TB HDD 7200RPM / DVD / Nvidia Geforce GTX 950M 4GB / 15.6" / FreeDOS </p></a>
-                        <p class="price">26.550.000 VND </p>
-                    </div>
-                    <div class="product">
-                        <img src="images/laptops/HP-ZBook-15-120x120.jpg" alt="">
-                        <a href="laptop-details.html"><p class="product-name">Hp ZBook 15 - 748008G128S750G2FHD / i7-4800QM / 8x2.7GHz~3.7GHz / 8GB DDR3 / 128GB SSD + 750GB HDD / DVD / Nvidia Quadro K1100 2GB / 15.6" FHD (1920x1080) / Win7 </p></a>
-                        <p class="price">16.990.000 VND </p>
-                    </div>
-                    <div class="product">
-                        <img src="images/laptops/1-120x120.jpg" alt="">
-                        <a href="laptop-details.html"><p class="product-name">Dell Precision M4800 - 7416G500SG2 / i7-4900MQ / 8x2.8GHz~3.8GHz / 16GB DDR3 / 500GB SSD / DVD / Nvidia Quadro K2100M 2GB / 15.6" FHD (1920x1080) / Win8 </p></a>
-                        <p class="price">39.990.000 VND </p>
-                    </div>
-                    <div class="product">
-                        <img src="images/laptops/hp-elitebook-8570w-01-120x120.jpg" alt="">
-                        <a href="laptop-details.html"><p class="product-name">Hp Elitebook 8570W - 73748G750G2FHD / i7-3840QM / 8x2.8GHz~3.8GHz / 8GB DDR3 / 750GB HDD / DVD / Nvidia Quadro K1000 2GB / 15.6" FHD (1920x1080) / Win7 license </p></a>
-                        <p class="price">13.750.000VND </p>
-                    </div>
-                    <a class="col-md-2 see-more" style="float: right;" href="#">Xem thêm ...</a>
                 </div>
             </div>
         </div>
