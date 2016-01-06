@@ -262,7 +262,7 @@ namespace Authentication.Controllers
             ClaimsIdentity identity = new ClaimsIdentity(OAuthDefaults.AuthenticationType);
 
             identity.AddClaim(new Claim(ClaimTypes.Name, userName));
-            identity.AddClaim(new Claim("role", "user"));
+            identity.AddClaim(new Claim("role", "member"));
 
             var props = new AuthenticationProperties()
             {
@@ -278,6 +278,7 @@ namespace Authentication.Controllers
                                         new JProperty("userName", userName),
                                         new JProperty("access_token", accessToken),
                                         new JProperty("token_type", "bearer"),
+                                        new JProperty("role", "member"),
                                         new JProperty("expires_in", tokenExpiration.TotalSeconds.ToString()),
                                         new JProperty(".issued", ticket.Properties.IssuedUtc.ToString()),
                                         new JProperty(".expires", ticket.Properties.ExpiresUtc.ToString())

@@ -6,7 +6,8 @@ mobileStoreApp.factory('authService', ['$http', '$q', 'localStorageService', 'ng
  
     var _authentication = {
         isAuth: false,
-        userName : "",
+        userName: "",
+        role: "",
         useRefreshTokens: false
     };
  
@@ -38,6 +39,7 @@ mobileStoreApp.factory('authService', ['$http', '$q', 'localStorageService', 'ng
  
             _authentication.isAuth = true;
             _authentication.userName = loginData.userName;
+            _authentication.role = loginData.role;
  
             deferred.resolve(response);
  
@@ -59,6 +61,7 @@ mobileStoreApp.factory('authService', ['$http', '$q', 'localStorageService', 'ng
             _authentication.isAuth = false;
             _authentication.userName = "";
             _authentication.useRefreshTokens = false;
+            _authentication.role = "";
         }
     };
  
@@ -70,6 +73,7 @@ mobileStoreApp.factory('authService', ['$http', '$q', 'localStorageService', 'ng
             _authentication.isAuth = true;
             _authentication.userName = authData.userName;
             _authentication.useRefreshTokens = authData.useRefreshTokens;
+            _authentication.role = authData.role;
         }
  
     }
@@ -108,11 +112,12 @@ mobileStoreApp.factory('authService', ['$http', '$q', 'localStorageService', 'ng
 
         $http.get(serviceBase + 'api/account/ObtainLocalAccessToken', { params: { provider: externalData.provider, externalAccessToken: externalData.externalAccessToken } }).success(function (response) {
 
-            localStorageService.set('authorizationData', { token: response.access_token, userName: response.userName, refreshToken: "", useRefreshTokens: false });
+            localStorageService.set('authorizationData', { token: response.access_token, userName: response.userName, refreshToken: "", useRefreshTokens: false, role: response.role });
 
             _authentication.isAuth = true;
             _authentication.userName = response.userName;
             _authentication.useRefreshTokens = false;
+            _authentication.role = response.role;
 
             deferred.resolve(response);
 
@@ -131,11 +136,12 @@ mobileStoreApp.factory('authService', ['$http', '$q', 'localStorageService', 'ng
 
         $http.post(serviceBase + 'api/account/registerexternal', registerExternalData).success(function (response) {
 
-            localStorageService.set('authorizationData', { token: response.access_token, userName: response.userName, refreshToken: "", useRefreshTokens: false });
+            localStorageService.set('authorizationData', { token: response.access_token, userName: response.userName, refreshToken: "", useRefreshTokens: false, role: response.role });
 
             _authentication.isAuth = true;
             _authentication.userName = response.userName;
             _authentication.useRefreshTokens = false;
+            _authentication.role = response.role;
 
             deferred.resolve(response);
 
