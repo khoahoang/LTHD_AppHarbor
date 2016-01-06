@@ -27,13 +27,17 @@
             { -->
             <div ng-repeat="y in x.listProduct">
                 <div class="product">
-                    <!-- <img src="@product.PRODUCT_IMG" alt=""> -->
-                    <img src="{{y.PRODUCT_IMG}}" alt="">
-                    <!-- <a href="@Url.Action("Index", "ProductDetail", new { idProduct = @product.PRODUCT_ID })"> -->
-                    <a href="index.html#/productdetail/{{y.PRODUCT_ID}}">
-                        <p class="product-name"><!-- @product.MODEL -->{{y.MODEL}}</p>
-                    </a>
-                    <p class="price"><!-- @product.PRICE -->{{y.PRICE | number}}</p>
+                    <div class="product-img">
+                        <!-- <img src="@product.PRODUCT_IMG" alt=""> -->
+                        <img src="{{y.PRODUCT_IMG}}" alt="">
+                    </div>
+                    <div class="product-info">
+                        <!-- <a href="@Url.Action("Index", "ProductDetail", new { idProduct = @product.PRODUCT_ID })"> -->
+                        <a href="index.html#/productdetail/{{y.PRODUCT_ID}}">
+                            <p class="product-name"><!-- @product.MODEL -->{{y.MODEL}}</p>
+                        </a>
+                        <p class="price"><!-- @product.PRICE -->{{y.PRICE | number}}</p>
+                    </div>
                 </div>
             </div>
         </div>
