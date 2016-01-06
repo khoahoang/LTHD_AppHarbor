@@ -101,6 +101,11 @@ hr{
 	border-bottom-color: #D4D4D4;
 	border-bottom-width: 1px;
 }
+.btn-google-plus {
+    margin-top: 14px;
+    color: white;
+    background-color: #DB4437;
+}
 /***end container ***/
 /*** Footer ***/
 .footer{
