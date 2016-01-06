@@ -1,0 +1,79 @@
+﻿<!--@model MobileStore.ViewModels.EditAttributeViewModel
+<link href="~/Content/css/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Quản lý thuộc tính";
+}
+
+<script src="/Scripts/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    function goBack() {
+        window.history.back();
+    }
+    $(function () {
+        // Document.ready -> link up remove event handler
+        $(".RemoveLink").click(function () {
+            var r = confirm("Bạn có muốn xóa thuộc tính này ??");
+            if (r == true) {
+                // Get the id from the link
+                var recordToDelete = $(this).attr("data-id");
+                if (recordToDelete != '') {
+                    // Perform the ajax post
+                    $.post("/Admin/RemoveAttribute", { "id": recordToDelete },
+                        function (data) {
+                            $('#row-' + data.DeleteId).fadeOut('slow');
+                            $('#update-message').text(data.Message);
+                        });
+                }
+            }
+
+        });
+    });
+</script>-->
+
+<h2>Quản lý thuộc tính sản phẩm <!--@ViewBag.Model_ID--></h2>
+<div id="update-message"> </div>
+<table class="table-condensed">
+    <thead>
+        <tr>
+            <th>
+                Tên thuộc tính
+            </th>
+            <th>
+                Giá trị
+            </th>
+            <th>
+                Xóa
+            </th>
+            <th>
+                Sửa thông tin
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <!--@foreach (var cat in Model.ListAttributes)
+        {
+        <tr id="row-@cat.ATTRIBUTE_ID">
+            <td>
+                @cat.ATTRIBUTE_NAME
+            </td>
+            <td>
+                @cat.ATTRIBUTE_VALUE
+            </td>
+            <td>
+                <a href="#" class="RemoveLink" data-id="@cat.ATTRIBUTE_ID" style="float:left; text-decoration:none">
+                    Xóa danh mục
+                </a>
+            </td>
+            <td>
+                <a href="@Url.Action(" editattribute", "Admin" , new { attribute_id=@cat.ATTRIBUTE_ID })">
+                    Sửa
+                </a>
+            </td>
+        </tr>
+        }-->
+    </tbody>
+</table>
+
+<div class="col-md-1">
+    <input type="button" onclick="goBack()" value="Trở lại" class="btn btn-default" />
+</div>

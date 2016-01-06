@@ -1,0 +1,225 @@
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\obj\Debug\Authentication.csprojResolveAssemblyReference.cache
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Authentication.dll.config
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Authentication.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Authentication.pdb
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\EntityFramework.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\EntityFramework.SqlServer.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.Owin.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.Owin.Security.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Newtonsoft.Json.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Owin.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\System.Net.Http.Formatting.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\System.Web.Http.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\System.Web.Http.Owin.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\System.Web.Http.WebHost.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\EntityFramework.xml
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\EntityFramework.SqlServer.xml
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.Owin.xml
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.Owin.Security.xml
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\System.Web.Http.Owin.xml
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Newtonsoft.Json.xml
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\System.Net.Http.Formatting.xml
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\System.Web.Http.xml
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\System.Web.Http.WebHost.xml
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\obj\Debug\Authentication.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\obj\Debug\Authentication.pdb
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.Owin.Cors.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\System.Web.Cors.dll
+c:\users\yourself\documents\visual studio 2013\Projects\Authentication\Authentication\bin\Microsoft.Owin.Cors.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Authentication.dll.config
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Authentication.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Authentication.pdb
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\EntityFramework.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\EntityFramework.SqlServer.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.Owin.Cors.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.Owin.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.Owin.Security.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Newtonsoft.Json.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Owin.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\System.Net.Http.Formatting.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\System.Web.Cors.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\System.Web.Http.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\System.Web.Http.Owin.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\System.Web.Http.WebHost.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\EntityFramework.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\EntityFramework.SqlServer.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.Owin.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.Owin.Cors.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.Owin.Security.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\System.Web.Http.Owin.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\Newtonsoft.Json.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\System.Net.Http.Formatting.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\System.Web.Http.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\System.Web.Http.WebHost.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\obj\Debug\Authentication.csprojResolveAssemblyReference.cache
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\obj\Debug\Authentication.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\obj\Debug\Authentication.pdb
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\PagedList.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\PagedList.Mvc.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\PagedList.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Server\Authentication\Authentication\bin\PagedList.Mvc.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\obj\Debug\Authentication.csprojResolveAssemblyReference.cache
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\obj\Debug\Authentication.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\obj\Debug\Authentication.pdb
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Authentication.dll.config
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Authentication.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Authentication.pdb
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\EntityFramework.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\EntityFramework.SqlServer.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Cors.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Newtonsoft.Json.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Owin.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\PagedList.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\PagedList.Mvc.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Net.Http.Formatting.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Cors.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.Owin.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.WebHost.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\EntityFramework.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\EntityFramework.SqlServer.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Cors.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\PagedList.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\PagedList.Mvc.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.Owin.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Newtonsoft.Json.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Net.Http.Formatting.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.WebHost.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.Google.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.Google.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Authentication.dll.config
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Authentication.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Authentication.pdb
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\EntityFramework.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\EntityFramework.SqlServer.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Core.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Cors.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.Cookies.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.Google.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.OAuth.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Newtonsoft.Json.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Owin.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\PagedList.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\PagedList.Mvc.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Net.Http.Formatting.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Cors.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.Owin.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.WebHost.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\EntityFramework.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\EntityFramework.SqlServer.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Core.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Cors.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.Cookies.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.Google.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.OAuth.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\PagedList.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\PagedList.Mvc.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.Owin.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\Newtonsoft.Json.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Net.Http.Formatting.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.WebHost.xml
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\obj\Debug\Authentication.csprojResolveAssemblyReference.cache
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\obj\Debug\Authentication.dll
+E:\LTHD-Client\LTHD_Final_Project\Total\Authentication\Authentication\obj\Debug\Authentication.pdb
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Authentication.dll.config
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Authentication.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Authentication.pdb
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\EntityFramework.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\EntityFramework.SqlServer.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Cors.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.Google.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Newtonsoft.Json.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Owin.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\PagedList.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\PagedList.Mvc.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Net.Http.Formatting.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Cors.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.Owin.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.WebHost.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\EntityFramework.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\EntityFramework.SqlServer.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Cors.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.Google.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\PagedList.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\PagedList.Mvc.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.Owin.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\Newtonsoft.Json.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Net.Http.Formatting.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\System.Web.Http.WebHost.xml
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\obj\Debug\Authentication.csprojResolveAssemblyReference.cache
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\obj\Debug\Authentication.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\obj\Debug\Authentication.pdb
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\HtmlAgilityPack.dll
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\HtmlAgilityPack.pdb
+D:\Hoc\Subject\Lap_trinh_hien_dai\Project\Project_folder\Folder_Project\LTHD_Final_Project\Total\Authentication\Authentication\bin\HtmlAgilityPack.xml

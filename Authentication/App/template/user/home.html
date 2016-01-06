@@ -1,0 +1,41 @@
+<div class="banner">
+    <div id="wrapper">
+        <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="app/img/slider/tablet.jpg" data-thumb="" alt="" title="Tablet" />
+                <img src="app/img/slider/acer1.jpg" data-thumb="" alt="" title="Acer laptop" />
+                <img src="app/img/slider/geforce.jpg" data-thumb="" alt="" title="Geforce" data-transition="slideInLeft" />
+                <img src="app/img/slider/asus2.jpg" data-thumb="" alt="" title="Asus" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="categories">
+    <!-- @foreach(ProductsOfCategory item in Model.ListProductsOfCategory)
+    { -->
+    <div ng-repeat="x in cat">
+        <div class="cat">
+            <div class="cat-header bottom_border" style="margin-bottom: 5px;">
+                <h4 class="col-sm-3 col-md-2 cat-header-name" onclick="moveToCategory('laptop');" style="cursor: progress;"><!-- @item.CategoryName -->{{x.category.CATEGORY_NAME}}</h4>
+
+                <!-- <a class="col-sm-2 col-md-2 see-more" href="@Url.Action("Index", "ShowProductsByCategory", new { category = @item.CategoryID })">Xem thêm ...</a> -->
+                <a class="col-sm-2 col-md-2 see-more" href="index.html#/showproductbycategory/{{x.category.CATEGORY_ID}}">Xem thêm ...</a>
+            </div>
+        </div>
+        <div class="cat-content bottom_border">
+            <!-- @foreach(PRODUCT product in @item.ListProducts)
+            { -->
+            <div ng-repeat="y in x.listProduct">
+                <div class="product">
+                    <!-- <img src="@product.PRODUCT_IMG" alt=""> -->
+                    <img src="{{y.PRODUCT_IMG}}" alt="">
+                    <!-- <a href="@Url.Action("Index", "ProductDetail", new { idProduct = @product.PRODUCT_ID })"> -->
+                    <a href="index.html#/productdetail/{{y.PRODUCT_ID}}">
+                        <p class="product-name"><!-- @product.MODEL -->{{y.MODEL}}</p>
+                    </a>
+                    <p class="price"><!-- @product.PRICE -->{{y.PRICE | number}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+﻿<div class="banner">
+    <div id="wrapper">
+        <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="./app/img/slider/tablet.jpg" data-thumb="" alt="" title="Tablet" />
+                <img src="./app/img/slider/acer1.jpg" data-thumb="" alt="" title="Acer laptop" />
+                <img src="./app/img/slider/geforce.jpg" data-thumb="" alt="" title="Geforce" data-transition="slideInLeft" />
+                <img src="./app/img/slider/asus2.jpg" data-thumb="" alt="" title="Asus" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="categories container">
+    <div class="title row">
+        <h1>{{Category}}</h1>
+        <br />
+        Sắp xếp
+        <select ng-model="orderList">
+            <option value="MODEL">A-Z</option>
+            <option value="-MODEL">Z-A</option>
+            <option value="PRICE">Rẻ nhất</option>
+            <option value="-PRICE">Đắt nhất</option>
+        </select>
+    </div>
+    <div class="content row">
+        <p></p>
+        <div ng-repeat="x in pro | orderBy : orderList">
+            <div class="product">
+                <img src="./{{x.PRODUCT_IMG}}" alt="hinh anh">
+                <a href="index.html#/productdetail/{{x.PRODUCT_ID}}">
+                    <p class="product-name">{{x.MODEL}}</p>
+                </a>
+                <p class="price">{{x.PRICE | number}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MobileData" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ATTRIBUTE">
+    <Key>
+      <PropertyRef Name="ATTRIBUTE_ID" />
+    </Key>
+    <Property Name="ATTRIBUTE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ATTRIBUTE_NAME" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ATTRIBUTE_VALUE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PRODUCT_ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CART">
+    <Key>
+      <PropertyRef Name="RECORD_ID" />
+    </Key>
+    <Property Name="RECORD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CART_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PRODUCT_ID" Type="Int32" Nullable="false" />
+    <Property Name="COUNT" Type="Int32" Nullable="false" />
+    <Property Name="TIME_CREATED" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="CATEGORY">
+    <Key>
+      <PropertyRef Name="CATEGORY_ID" />
+    </Key>
+    <Property Name="CATEGORY_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CATEGORY_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HOME_PAGE" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CUSTOMER">
+    <Key>
+      <PropertyRef Name="CUSTOMER_ID" />
+    </Key>
+    <Property Name="CUSTOMER_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FIRST_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LAST_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ADDRESS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PHONE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ACTIVE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="USERNAME" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RESET_PASSWORD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DATE_REQUEST" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="EMPLOYEE">
+    <Key>
+      <PropertyRef Name="EMPLOYEE_ID" />
+    </Key>
+    <Property Name="EMPLOYEE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EMPLOYEE_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="FIRST_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LAST_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ADDRESS" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="PHONE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ROLE_ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MANUFACTURE">
+    <Key>
+      <PropertyRef Name="MANUFACTURE_ID" />
+    </Key>
+    <Property Name="MANUFACTURE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MANUFACTURE_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ORDER_DETAILS">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+      <PropertyRef Name="PRODUCT_ID" />
+    </Key>
+    <Property Name="ORDER_ID" Type="Int32" Nullable="false" />
+    <Property Name="PRODUCT_ID" Type="Int32" Nullable="false" />
+    <Property Name="QUANTITY" Type="Int32" Nullable="false" />
+    <Property Name="UNIT_PRICE" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ORDER">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="ORDER_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CUSTOMER_ID" Type="Int32" Nullable="false" />
+    <Property Name="ORDER_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ADDRESS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PHONE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PAID" Type="Int32" Nullable="false" />
+    <Property Name="TOTAL" Type="Double" Nullable="false" />
+    <Property Name="DELETED" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PRODUCT">
+    <Key>
+      <PropertyRef Name="PRODUCT_ID" />
+    </Key>
+    <Property Name="PRODUCT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MODEL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MANUFACTURE_ID" Type="Int32" />
+    <Property Name="PRICE" Type="Double" Nullable="false" />
+    <Property Name="QUANTITY" Type="Int32" Nullable="false" />
+    <Property Name="MODEL_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PRODUCT_IMG" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DATE_ADD" Type="DateTime" Precision="0" />
+    <Property Name="DELETED" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PRODUCT_ATTRIBUTE">
+    <Key>
+      <PropertyRef Name="PRODUCT_ID" />
+      <PropertyRef Name="ATTRIBUTE_ID" />
+    </Key>
+    <Property Name="PRODUCT_ID" Type="Int32" Nullable="false" />
+    <Property Name="ATTRIBUTE_ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRODUCT_CATEGORY">
+    <Key>
+      <PropertyRef Name="PRODUCT_ID" />
+      <PropertyRef Name="CATEGORY_ID" />
+    </Key>
+    <Property Name="PRODUCT_ID" Type="Int32" Nullable="false" />
+    <Property Name="CATEGORY_ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRODUCT_DESCRIPTION">
+    <Key>
+      <PropertyRef Name="PRODUCT_ID" />
+    </Key>
+    <Property Name="PRODUCT_ID" Type="Int32" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="DESCRIPTIONS" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ROLE">
+    <Key>
+      <PropertyRef Name="ROLE_ID" />
+    </Key>
+    <Property Name="ROLE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ROLE_CODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ROLE_NAME" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="WEBDATAEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ATTRIBUTEs" EntityType="Self.ATTRIBUTE" />
+    <EntitySet Name="CARTs" EntityType="Self.CART" />
+    <EntitySet Name="CATEGORies" EntityType="Self.CATEGORY" />
+    <EntitySet Name="CUSTOMERs" EntityType="Self.CUSTOMER" />
+    <EntitySet Name="EMPLOYEEs" EntityType="Self.EMPLOYEE" />
+    <EntitySet Name="MANUFACTUREs" EntityType="Self.MANUFACTURE" />
+    <EntitySet Name="ORDER_DETAILS" EntityType="Self.ORDER_DETAILS" />
+    <EntitySet Name="ORDERS" EntityType="Self.ORDER" />
+    <EntitySet Name="PRODUCTs" EntityType="Self.PRODUCT" />
+    <EntitySet Name="PRODUCT_ATTRIBUTE" EntityType="Self.PRODUCT_ATTRIBUTE" />
+    <EntitySet Name="PRODUCT_CATEGORY" EntityType="Self.PRODUCT_CATEGORY" />
+    <EntitySet Name="PRODUCT_DESCRIPTION" EntityType="Self.PRODUCT_DESCRIPTION" />
+    <EntitySet Name="ROLEs" EntityType="Self.ROLE" />
+  </EntityContainer>
+</Schema>

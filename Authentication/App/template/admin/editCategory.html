@@ -1,0 +1,44 @@
+﻿@model MobileStore.ViewModels.EditCategoryViewModel
+@{
+    ViewBag.Title = "Sửa danh mục sản phẩm";
+}
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+<h2>@ViewBag.Title</h2>
+<p style="color:red">@ViewBag.Message</p>
+<div class="container">
+    <section id="addProduct">
+        @using (Html.BeginForm("EditCategory", "Admin", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+        @Html.AntiForgeryToken()
+        <hr />
+        @Html.ValidationSummary(true)
+        <input type="hidden" name="Product_ID" value="@Model.Product_id">
+
+        <h4>Sản phẩm @Model.Model_ID</h4>
+
+        <ul>
+            @foreach (var item in Model.ListCategories)
+            {
+            <li>
+                <input type="checkbox" name="SelectedCategories" value="@item.CATEGORY_ID" id="@item.CATEGORY_ID"
+                       @if (model.selectedcategories.contains(item.category_id)) {><text> checked='checked' </text>   } />
+                <label for="@item.CATEGORY_ID">@item.CATEGORY_NAME</label>
+            </li>
+            }
+        </ul>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-1">
+                <input type="submit" value="Lưu" class="btn btn-default" />
+            </div>
+            <div class="col-md-1">
+                <input type="button" onclick="goBack()" value="Trở lại" class="btn btn-default" />
+            </div>
+        </div>
+        }
+    </section>
+</div>
+

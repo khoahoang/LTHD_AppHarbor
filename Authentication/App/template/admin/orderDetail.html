@@ -1,0 +1,72 @@
+﻿<!--@model MobileStore.ViewModels.OrderDetailViewModel
+@using MobileStore.Models
+@{
+    ViewBag.Title = "Thông tin đơn đặt hàng";
+}
+
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+    function ReverseSubmit() {
+        var url = document.getElementById("Reverse").value;
+        window.location.href = url;
+    }
+</script>-->
+<h2>Chi tiết hóa đơn</h2>
+<div class="container">
+    <section id="OrderDetail">
+        <table class="table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Mã sản phẩm
+                    </th>
+                    <th style="padding-bottom:5px;padding-left:23px;">
+                        Tên sản phẩm
+                    </th>
+                    <th style="padding-bottom:5px;padding-left:23px;">
+                        Giá
+                    </th>
+                    <th style="padding-bottom:5px;padding-left:23px;">
+                        Số lượng
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ID</td>
+                    <td style="padding-bottom:5px;padding-left:23px;">MODEL</td>
+                    <td style="padding-bottom:5px;padding-left:23px;">PRICE</td>
+                    <td style="padding-bottom:5px;padding-left:23px;">QUANTITY</td>
+                </tr>
+                <!--@foreach (ORDER_DETAILS item in Model.ListOrderDetail)
+                {
+                <tr>
+                    <td>@item.PRODUCT.MODEL_ID</td>
+                    <td style="padding-bottom:5px;padding-left:23px;">@item.PRODUCT.MODEL</td>
+                    <td style="padding-bottom:5px;padding-left:23px;">@item.UNIT_PRICE</td>
+                    <td style="padding-bottom:5px;padding-left:23px;">@item.QUANTITY</td>
+                </tr>
+                }-->
+            </tbody>
+        </table>
+    </section>
+
+    <div class="row" style="margin-top:20px">
+        <div class="col-md-2">
+            <input id="Reverse" type="hidden" value="/Admin/ReverseOrder?OrderID=@Model.OrderID" />
+            <div class="form-group">
+                <input type="button" value="chưa thanh toán" onclick="thanhtoan()"/>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="form-group">
+                <input type="submit" value="Trở về" class="btn btn-default" onclick="goBack()" />
+            </div>
+        </div>
+    </div>
+
+</div>

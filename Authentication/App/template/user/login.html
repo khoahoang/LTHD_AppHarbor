@@ -1,0 +1,18 @@
+<div class="col-sm-4"/>
+<div class="col-sm-4" align="center">
+	<h2>Đăng nhập</h2>
+    <div class="row">
+		<form role="form" class="form-horizontal">
+		    <input type="text" class="form-control" placeholder="Tên tài khoản" data-ng-model="loginData.userName" required autofocus>
+		    <br/>
+		    <input type="password" class="form-control" placeholder="Mật khẩu" data-ng-model="loginData.password" required>
+		    <br/>
+		    <button class="btn btn-lg btn-info btn-block" type="submit" data-ng-click="login()">Login</button>
+		     <div data-ng-hide="message == ''" class="alert alert-danger">
+		        {{message}}
+		    </div>
+		</form>
+	</div>
+    <button class="btn btn-large btn-google-plus btn-block" type="button" data-ng-click="authExternalProvider('Google')"><i class="fa fa-google-plus"></i> | Connect with Google+</button>
+</div>
+<div class="col-sm-4"/>

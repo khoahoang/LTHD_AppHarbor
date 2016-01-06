@@ -1,0 +1,104 @@
+﻿<!--@model PagedList.IPagedList<mobilestore.models.product>
+    @using PagedList.Mvc;
+    <link href="~/Content/css/PagedList.css" rel="stylesheet" type="text/css" />
+
+    @{
+    ViewBag.Title = "Quản lý sản phẩm";
+    }
+    <script src="/Scripts/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            // Document.ready -> link up remove event handler
+            $(".RemoveLink").click(function () {
+                var r = confirm("Bạn có muốn xóa tài sản phẩm này ??");
+                if (r == true) {
+                    // Get the id from the link
+                    var recordToDelete = $(this).attr("data-id");
+                    if (recordToDelete != '') {
+                        // Perform the ajax post
+                        $.post("/Admin/RemoveProduct", { "id": recordToDelete },
+                            function (data) {
+                                $('#row-' + data.DeleteId).fadeOut('slow');
+                                $('#update-message').text(data.Message);
+                            });
+                    }
+                }
+
+            });
+        });
+    </script>-->
+
+<h1>Quản lý sản phẩm</h1>
+Search: <input type="text" ng-model="strSearch"/>
+<br/>
+<table class="table-condensed">
+    <thead>
+        <tr>
+            <th>
+                Model
+            </th>
+            <th>
+                Giá
+            </th>
+            <th>
+                NSX
+            </th>
+            <th colspan="2" style="text-align: center">
+                Thao tác
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="x in list | filter : strSearch" ng-hide="x.Delete">
+            <td style="text-align: left">
+                <span ng-hide="x.Editing">{{x.Name}}</span>
+                <input type="text" ng-show="x.Editing" ng-model="x.Name" ng-blur="doneEditing(x)" />
+            </td>
+            <td>
+                <span ng-hide="x.Editing">{{x.Price | number}}</span>
+                <input type="text" ng-show="x.Editing" ng-model="x.Price" ng-blur="doneEditing(x)" />
+            </td>
+            <td>
+                <span ng-hide="x.Editing">{{x.NSX}}</span>
+                <select ng-show="x.Editing" ng-model="x.NSX" ng-blur="doneEditing(x)">
+                    <option ng-repeat="y in mans">{{y.MANUFACTURE_NAME}}</option>
+                </select>
+                <!--<input type="text" ng-show="x.Editing" ng-model="x.NSX" ng-blur="doneEditing(x)" />-->
+            </td>
+            <td>
+                <a ng-click="editItem(x)" style="float:left; text-decoration:none">
+                    Chỉnh sửa
+                </a>
+            </td>
+            <td>
+                <a ng-click="xoa(x)">
+                    Xóa
+                </a>
+            </td>
+        </tr>
+        <!--@foreach (var item in Model)
+        {
+        <tr id="row-@item.PRODUCT_ID">
+            <td>@item.MODEL_ID</td>
+            <td>@item.MODEL</td>
+            <td>@item.QUANTITY</td>
+            <td>@item.PRICE</td>
+            <td>
+                <a href="#" class="RemoveLink" data-id="@item.PRODUCT_ID" style="float:left; text-decoration:none">
+                    Xóa sản phẩm
+                </a>
+            </td>
+            <td>
+                <a href="@Url.Action(" product", "Admin" , new { product_id=@item.PRODUCT_ID })">
+                    Xem
+                </a>
+            </td>
+        </tr>
+        }-->
+    </tbody>
+</table>
+
+<uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>
+    <!--<p style="color:red">Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount</p>
+    @Html.PagedListPager(Model, page => Url.Action("ManageProduct", "Admin",
+    new { page }))-->

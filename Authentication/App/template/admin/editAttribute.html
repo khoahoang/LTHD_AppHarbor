@@ -1,0 +1,56 @@
+﻿@model MobileStore.Models.ATTRIBUTE
+@{
+    ViewBag.Title = "Sửa thuộc tính sản phẩm";
+}
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+<h2>@ViewBag.Title</h2>
+<p style="color:red">@ViewBag.Message</p>
+<div class="container">
+    <section id="addProduct">
+        @using (Html.BeginForm("EditAttribute", "Admin", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+        @Html.AntiForgeryToken()
+        <hr />
+        @Html.ValidationSummary(true)
+        <input type="hidden" name="Product_ID" value="@Model.PRODUCT_ID">
+        <input type="hidden" name="Attribute_ID" value="@Model.ATTRIBUTE_ID">
+
+        <table class="table table-bordered" style="width:80%">
+            <thead>
+                <tr>
+                    <td>Tên thuộc tính</td>
+                    <td>Giá trị</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="col-md-3" style="width:90%">
+                            @Html.TextBoxFor(m => m.ATTRIBUTE_NAME, new { @class = "form-control" })
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-md-3" style="width:90%">
+                            @Html.TextBoxFor(m => m.ATTRIBUTE_VALUE, new { @class = "form-control" })
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="row">
+            <div class="col-md-offset-2 col-md-1">
+                <input type="submit" value="Lưu" class="btn btn-default" />
+            </div>
+            <div class="col-md-1">
+                <input type="button" onclick="goBack()" value="Trở lại" class="btn btn-default" />
+            </div>
+        </div>
+        }
+    </section>
+</div>
+

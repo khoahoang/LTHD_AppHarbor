@@ -1,0 +1,90 @@
+﻿@model PagedList.IPagedList<mobilestore.models.employee>
+    @using PagedList.Mvc;
+    <link href="~/Content/css/PagedList.css" rel="stylesheet" type="text/css" />
+    @{
+    ViewBag.Title = "Quản lý tài khoản nhân viên";
+    }
+
+    <script src="/Scripts/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            // Document.ready -> link up remove event handler
+            $(".RemoveLink").click(function () {
+                var r = confirm("Bạn có muốn xóa tài khoản này ??");
+                if (r == true) {
+                    // Get the id from the link
+                    var recordToDelete = $(this).attr("data-id");
+                    if (recordToDelete != '') {
+                        // Perform the ajax post
+                        $.post("/Admin/RemoveEmployee", { "id": recordToDelete },
+                            function (data) {
+                                $('#row-' + data.DeleteId).fadeOut('slow');
+                                $('#update-message').text(data.Message);
+                            });
+                    }
+                }
+
+            });
+        });
+    </script>
+
+    <h2>Quản lý tài khoản nhân viên</h2>
+    <div id="update-message"> </div>
+    <table class="table-condensed">
+        <thead>
+            <tr>
+                <th>
+                    Mã nhân viên
+                </th>
+                <th>
+                    Họ
+                </th>
+                <th>
+                    Tên
+                </th>
+                <th>
+                    Loại tài khoản
+                </th>
+                <th>
+                    Xóa
+                </th>
+                <th>
+                    Xem thông tin
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model)
+            {
+            <tr id="row-@employee.EMPLOYEE_ID">
+                <td>
+                    @employee.EMPLOYEE_CODE
+                </td>
+                <td>
+                    @employee.FIRST_NAME
+                </td>
+                <td>
+                    @employee.LAST_NAME
+                </td>
+                <td>
+                    @employee.ROLE.ROLE_NAME
+                </td>
+                <td>
+                    <a href="#" class="RemoveLink" data-id="@employee.EMPLOYEE_ID" style="float:left; text-decoration:none">
+                        Xóa tài khoản
+                    </a>
+                </td>
+                <td>
+                    <a href="@Url.Action(" employee", "Admin" , new { employee_id=@employee.EMPLOYEE_ID })">
+                        Xem
+                    </a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <p style="color:red">Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount</p>
+    @Html.PagedListPager(Model, page => Url.Action("ManageProduct", "Admin",
+    new { page }))
+

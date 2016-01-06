@@ -1,0 +1,68 @@
+﻿@model MobileStore.ViewModels.AddProductViewModel
+@{
+    ViewBag.Title = "Thêm sản phẩm";
+}
+<h2>@ViewBag.Title</h2>
+<div class="container">
+    <section id="addProduct">
+        @using (Html.BeginForm("AddProduct", "Admin", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+        @Html.AntiForgeryToken()
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(m => m.Model_ID, new { @class = "col-md-2 control-label" })
+            <div class="col-md-5">
+                @Html.TextBoxFor(m => m.Model_ID, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Model_ID)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Model, new { @class = "col-md-2 control-label" })
+            <div class="col-md-5">
+                @Html.TextBoxFor(m => m.Model, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Model)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Description, new { @class = "col-md-2 control-label" })
+            <div class="col-md-5">
+                @Html.TextBoxFor(m => m.Description, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Description)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Nhà sản xuất:", new { @class = "col-md-2 control-label" })
+            <div class="col-md-5">
+                @Html.DropDownList("Manufacture")
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Product_img, new { @class = "col-md-2 control-label" })
+            <div class="col-md-5">
+                @Html.TextBoxFor(m => m.Product_img, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Product_img)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Price, new { @class = "col-md-2 control-label" })
+            <div class="col-md-5">
+                @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Price)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Quantity, new { @class = "col-md-2 control-label" })
+            <div class="col-md-5">
+                @Html.TextBoxFor(m => m.Quantity, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Quantity)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Thêm sản phẩm" class="btn btn-default" />
+            </div>
+        </div>
+        }
+    </section>
+</div>

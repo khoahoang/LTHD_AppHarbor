@@ -1,0 +1,125 @@
+﻿<!--@model MobileStore.ViewModels.ManageAccountEmployeeViewModel
+@{
+    ViewBag.Title = "Thông tin tài khoản";
+}
+<style>
+    .core-content {
+        width: 100%;
+    }
+</style>
+<h2>Quản lý tài khoản</h2>
+<p>Message</p>
+<div class="row">
+    <div class="col-md-8">
+        <section id="changeInfoEmployeeForm">
+            @using (Html.BeginForm("ManageAccount", "Admin", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+            @Html.AntiForgeryToken()
+            <hr />
+            @Html.ValidationSummary()
+            <input type="hidden" name="EmployeeCode" value="@Model.EmployeeCode" />
+            <div class="form-group">
+                <!--@Html.LabelFor(m => m.FristName, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.FristName, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.LastName, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Address, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Address, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Phone, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" class="btn btn-default" value="Lưu thay đổi" />
+                </div>
+            </div>
+            }
+        </section>
+    </div>
+</div>-->
+
+
+<div id="update-message">Quản lý tài khoản</div>
+<table class="table-condensed">
+    <thead>
+        <tr>
+            <th>
+                Tên tài khoản
+            </th>
+            <th>
+                Khóa
+            </th>
+            <th>
+                Xóa
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <a href="#" class="RemoveLink" style="float:left; text-decoration:none">
+                    abc
+                </a>
+            </td>
+            <td>
+                <a href="#">
+                    Khóa
+                </a>
+            </td>
+            <td>
+                <a href="#">
+                    Xóa
+                </a>
+            </td>
+        </tr>
+        <!--@foreach (var item in Model)
+        {
+        <tr id="row-@item.PRODUCT_ID">
+            <td>@item.MODEL_ID</td>
+            <td>@item.MODEL</td>
+            <td>@item.QUANTITY</td>
+            <td>@item.PRICE</td>
+            <td>
+                <a href="#" class="RemoveLink" data-id="@item.PRODUCT_ID" style="float:left; text-decoration:none">
+                    Xóa sản phẩm
+                </a>
+            </td>
+            <td>
+                <a href="@Url.Action(" product", "Admin" , new { product_id=@item.PRODUCT_ID })">
+                    Xem
+                </a>
+            </td>
+        </tr>
+        }-->
+    </tbody>
+</table>
+<!--<p style="color:red">Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount</p>
+@Html.PagedListPager(Model, page => Url.Action("ManageProduct", "Admin",
+new { page }))-->

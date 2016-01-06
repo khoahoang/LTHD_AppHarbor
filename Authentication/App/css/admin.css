@@ -1,0 +1,25 @@
+﻿.account {
+float: right;
+margin-top: 35px;
+}
+.main-content{
+margin: 0 auto;
+}
+.menu{
+margin-top: 40px;
+float: left;
+}
+.borderline {
+    width: 1px;
+    height: 460px;
+    float: left;
+    background: transparent url("../images/v_line.jpg") repeat-y scroll 0% 0%;
+    display: inline;
+}
+.core-content{
+    min-height:410px;
+    float:left;
+    padding-left: 40px;
+    margin-top: 24px;
+    margin-bottom: 80px;
+}

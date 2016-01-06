@@ -1,0 +1,117 @@
+﻿@model MobileStore.ViewModels.ProductInfo
+@using MobileStore.Models
+@{
+    ViewBag.Title = "Thông tin sản phẩm " + @Model.Model_ID;
+}
+
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function EditInfoSubmit() {
+        var url = document.getElementById("EditInfo").value;
+        window.location.href = url;
+    }
+
+    function EditAttributeSubmit() {
+        var url = document.getElementById("EditAttribute").value;
+        window.location.href = url;
+    }
+
+    function AddAttributeSubmit() {
+        var url = document.getElementById("AddAttribute").value;
+        window.location.href = url;
+    }
+
+    function EditCategorySubmit() {
+        var url = document.getElementById("EditCategory").value;
+        window.location.href = url;
+    }
+</script>
+<input type="button" onclick="goBack()" value="Trở lại" class="btn btn-default" />
+<h2>@ViewBag.Title</h2>
+<div class="container">
+    <section id="infoProduct">
+        <table class="table-striped">
+            <tr>
+                <td>@Html.Label("Mã sản phẩm: ")</td>
+                <td style="padding-bottom:5px;padding-left:23px;">@Model.Model_ID</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Tên sản phẩm: ")</td>
+                <td style="padding-bottom:5px;padding-left:23px;">@Model.Model</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Mô tả: ")</td>
+                <td style="padding-bottom:5px;padding-left:23px;">@Model.Description</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Nhà sản xuất: ")</td>
+                <td style="padding-bottom:5px;padding-left:23px;">@Model.Manufacture</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Giá: ")</td>
+                <td style="padding-bottom:5px;padding-left:23px;">@Model.Price</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Số lượng: ")</td>
+                <td style="padding-bottom:5px;padding-left:23px;">@Model.Quantity</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Hình ảnh: ")</td>
+                <td style="padding-bottom:5px;padding-left:23px;"><img src="@Model.Product_Img" width="200px" height="200px" alt=""></td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Thuộc tính: ")</td>
+                <td style="padding-bottom:5px;padding-left:23px;">
+                    @foreach (ATTRIBUTE item in Model.ListAttribute)
+                    {
+                    <p>@item.ATTRIBUTE_NAME : @item.ATTRIBUTE_VALUE</p>
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Danh mục: ")</td>
+                <td style="padding-bottom:5px;padding-left:23px;">
+                    @foreach (CATEGORY item in Model.ListCategory)
+                    {
+                    <p>@item.CATEGORY_NAME</p>
+                    }
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <div class="row" style="margin-top:20px">
+        <div class="col-md-2">
+            <input id="EditInfo" type="hidden" value="/Admin/EditProduct?Product_ID=@Model.Product_ID" />
+            <div class="form-group">
+                <input type="button" value="Sửa thông tin" class="btn btn-default" onclick="EditInfoSubmit()" />
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <input id="EditAttribute" type="hidden" value="/Admin/Attribute?Product_ID=@Model.Product_ID" />
+            <div class="form-group">
+                <input type="submit" value="Sửa thuộc tính" class="btn btn-default" onclick="EditAttributeSubmit()" />
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <input id="AddAttribute" type="hidden" value="/Admin/AddAttribute?Product_ID=@Model.Product_ID" />
+            <div class="form-group">
+                <input type="submit" value="Thêm thuộc tính" class="btn btn-default" onclick="AddAttributeSubmit()" />
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <input id="EditCategory" type="hidden" value="/Admin/EditCategory?Product_ID=@Model.Product_ID" />
+            <div class="form-group">
+                <input type="submit" value="Sửa danh mục" class="btn btn-default" onclick="EditCategorySubmit()" />
+            </div>
+        </div>
+    </div>
+
+</div>

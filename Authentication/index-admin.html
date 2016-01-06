@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta content="text/html" charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="app/lib/bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="app/lib/nivo-slider/default.css" type="text/css">
+    <link rel="stylesheet" href="app/lib/nivo-slider/nivo-slider.css" type="text/css">
+    <link rel="stylesheet" href="app/css/style.css" type="text/css">
+    <link rel="stylesheet" href="app/css/detail-page-style.css" type="text/css">
+    <link rel="stylesheet" href="app/css/admin.css" type="text/css">
+
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="app/lib/jquery/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="app/lib/nivo-slider/jquery.nivo.slider.js"></script>
+    <script type="text/javascript" src="app/lib/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="app/lib/numeral/numeral.min.js"></script>
+
+
+    <!-- Add angular lib -->
+    <script type="text/javascript" src="app/lib/angular/angular.js"></script>
+    <script type="text/javascript" src="app/lib/angular/angular-route.js"></script>
+    <script type="text/javascript" src="app/script/angularjs-local-storage.min.js"></script>
+    <script type="text/javascript" src="app/script/loading-bar.min.js"></script>
+    <script type="text/javascript" src="app/lib/bootstrap/js/ui-bootstrap-tpls-0.14.3.min.js"></script>
+
+    <!-- Add main app -->
+    <script type="text/javascript" src="app/js/appAdmin.js"></script>
+
+    <!-- Add Service -->
+    <script src="app/service/authInterceptorService.js"></script>
+    <script src="app/service/authService.js"></script>
+
+    <!-- Add controller -->
+    <script type="text/javascript" src="app/js/admin/homeAdminController.js"></script>
+    <script type="text/javascript" src="app/js/admin/managerProductController.js"></script>
+    <script type="text/javascript" src="app/js/admin/managerAccount.js"></script>
+    <script type="text/javascript" src="app/js/admin/managerCategory.js"></script>
+    <script type="text/javascript" src="app/js/admin/managerOrder.js"></script>
+
+
+</head>
+<body ng-app="appAdmin">
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="logo col-md-2">
+                    <img src="app/img/logo/logo.jpg" width="200" height="65" alt="logo" style="cursor: pointer;">
+                </div>
+
+                <div class="account col-md-3">
+                    <!--@if(@Session["Employee_code"] != null)
+                    {
+                    <p>Xin chào, @Session["Employee_code"]</p>
+                    @Html.ActionLink("Đăng xuất", "LogOut", "Admin")
+                    }
+                    else
+                    {
+                    <p>Xin chào</p>
+                    }-->
+                    <p>Xin chào</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="menu col-md-2">
+                    <ul>
+                        <li>
+                            <a href="#/managerProduct">Quản lý sản phẩm</a>
+                        </li>
+                        <li>
+                            <a href="#/managerAccount">Quản lý tài khoản</a>
+                        </li>
+                        <li>
+                            <a href="#/managerCategory">Quản lý danh mục</a>
+                        </li>
+                        <li>
+                            <a href="#/managerOrder">Quản lý order</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="borderline"></div>
+                <div class="main-content col-md-8">
+                    <div class="core-content">
+                        <div ng-view></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
