@@ -54,8 +54,8 @@ appAdmin.config(function ($httpProvider) {
     $httpProvider.interceptors.push('authInterceptorService');
 });
 
-var serviceBase = 'http://localhost:41127/';
-//var serviceBase = 'http://ngauthenticationapi.azurewebsites.net/';
+//var serviceBase = 'http://localhost:41127/';
+var serviceBase = 'http://mobilestore.apphb.com/';
 appAdmin.constant('ngAuthSettings', {
     apiServiceBaseUri: serviceBase,
     clientId: 'ngAuthApp'
