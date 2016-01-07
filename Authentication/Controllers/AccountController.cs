@@ -262,7 +262,8 @@ namespace Authentication.Controllers
             ClaimsIdentity identity = new ClaimsIdentity(OAuthDefaults.AuthenticationType);
 
             identity.AddClaim(new Claim(ClaimTypes.Name, userName));
-            identity.AddClaim(new Claim("role", "member"));
+            identity.AddClaim(new Claim("sub", userName));
+            identity.AddClaim(new Claim(ClaimTypes.Role, "member"));
 
             var props = new AuthenticationProperties()
             {

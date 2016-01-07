@@ -26,26 +26,19 @@
         </select>
     </div>
     <div class="content row">
-        <!-- <p>@ViewBag.Message</p> -->
         <p>{{Message}}</p>
 
         <div class="product" ng-repeat="x in pro.Products | orderBy : orderList">
-            <img src="{{x.PRODUCT_IMG}}" alt="hinh anh">
-            <a href="index.html#/productdetail/{{x.PRODUCT_ID}}">
-                <p class="product-name">{{x.MODEL}}</p>
-            </a>
-            <p class="price">{{x.PRICE | number}}</p>
-        </div>
-        <!-- @foreach (var item in Model)
-        {
-            <div class="product">
-                <img src="@item.PRODUCT_IMG" alt="">
-                <a href="@Url.Action("Index", "ProductDetail", new { idProduct = @item.PRODUCT_ID })">
-                    <p class="product-name">@item.MODEL</p>
-                </a>
-                <p class="price">@item.PRICE</p>
+            <div class="product-img">
+                <img src="{{x.PRODUCT_IMG}}" alt="hinh anh">
             </div>
-        } -->
+            <div class="product-info">
+                <a href="index.html#/productdetail/{{x.PRODUCT_ID}}">
+                    <p class="product-name">{{x.MODEL}}</p>
+                </a>
+                <p class="price">{{x.PRICE | number}}</p>
+            </div>
+        </div>
     </div>
 </div>
 

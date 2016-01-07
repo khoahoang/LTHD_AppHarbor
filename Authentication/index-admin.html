@@ -29,8 +29,8 @@
     <script type="text/javascript" src="app/js/appAdmin.js"></script>
 
     <!-- Add Service -->
-    <script src="app/service/authInterceptorService.js"></script>
-    <script src="app/service/authService.js"></script>
+    <script src="app/service/Admin/authInterceptorService.js"></script>
+    <script src="app/service/Admin/authService.js"></script>
 
     <!-- Add controller -->
     <script type="text/javascript" src="app/js/admin/homeAdminController.js"></script>
@@ -38,28 +38,33 @@
     <script type="text/javascript" src="app/js/admin/managerAccount.js"></script>
     <script type="text/javascript" src="app/js/admin/managerCategory.js"></script>
     <script type="text/javascript" src="app/js/admin/managerOrder.js"></script>
+    <script type="text/javascript" src="app/js/admin/orderDetailController.js"></script>
+    <script type="text/javascript" src="app/js/admin/imgController.js"></script>
+    <script type="text/javascript" src="app/js/admin/managerUserController.js"></script>
+    <script type="text/javascript" src="app/js/admin/indexController.js"></script>
 
 
 </head>
 <body ng-app="appAdmin">
     <div class="header">
         <div class="container">
-            <div class="row">
+            <div class="row" ng-controller="indexController">
                 <div class="logo col-md-2">
                     <img src="app/img/logo/logo.jpg" width="200" height="65" alt="logo" style="cursor: pointer;">
                 </div>
 
                 <div class="account col-md-3">
                     <!--@if(@Session["Employee_code"] != null)
-                    {
-                    <p>Xin chào, @Session["Employee_code"]</p>
-                    @Html.ActionLink("Đăng xuất", "LogOut", "Admin")
-                    }
-                    else
-                    {
-                    <p>Xin chào</p>
-                    }-->
-                    <p>Xin chào</p>
+            {
+            <p>Xin chào, @Session["Employee_code"]</p>
+            @Html.ActionLink("Đăng xuất", "LogOut", "Admin")
+            }
+            else
+            {
+            <p>Xin chào</p>
+            }-->
+                    <p>Xin chào   <font style="font-style: italic">{{authentication.userName}}</font>    </p>
+                    <input type="button" class="btn btn-danger" value="Đăng xuất" ng-click="logout()" />
                 </div>
             </div>
         </div>
@@ -74,18 +79,18 @@
                             <a href="#/managerProduct">Quản lý sản phẩm</a>
                         </li>
                         <li>
-                            <a href="#/managerAccount">Quản lý tài khoản</a>
-                        </li>
-                        <li>
                             <a href="#/managerCategory">Quản lý danh mục</a>
                         </li>
                         <li>
-                            <a href="#/managerOrder">Quản lý order</a>
+                            <a href="#/managerOrder">Quản lý đặt hàng</a>
+                        </li>
+                        <li>
+                            <a href="#/managerUser">Quản lý tài khoản</a>
                         </li>
                     </ul>
                 </div>
                 <div class="borderline"></div>
-                <div class="main-content col-md-8">
+                <div class="main-content col-md-9">
                     <div class="core-content">
                         <div ng-view></div>
                     </div>

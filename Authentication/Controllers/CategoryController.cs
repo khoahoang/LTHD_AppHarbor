@@ -34,7 +34,7 @@ namespace MobileSt.Controllers
             {
                 kq.listProduct = (from e in data.PRODUCT_CATEGORY
                                   join f in data.PRODUCTs on e.PRODUCT_ID equals f.PRODUCT_ID
-                                  where e.CATEGORY_ID == id
+                                  where e.CATEGORY_ID == id && f.DELETED == 0
                                   select f).Take(10).ToList();
 
                 kq.category = (from c in data.CATEGORies

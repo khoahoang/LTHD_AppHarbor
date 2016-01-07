@@ -1,0 +1,23 @@
+﻿<!--@model MobileStore.ViewModels.OrderDetailViewModel
+@using MobileStore.Models
+@{
+    ViewBag.Title = "Thông tin đơn đặt hàng";
+}
+
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+    function ReverseSubmit() {
+        var url = document.getElementById("Reverse").value;
+        window.location.href = url;
+    }
+</script>-->
+<h2>Hình ảnh sản phẩm</h2>
+<div class="container">
+    <input type="text" class="form-control" placeholder="Link hình ảnh" ng-model="link" />
+    <input type="button" class="btn btn-success" value="Upload" ng-click="upload()" />
+    <br />
+    <img src="{{link}}" alt="hình ảnh sản phẩm"/>
+</div>

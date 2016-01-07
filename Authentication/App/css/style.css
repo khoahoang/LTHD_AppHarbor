@@ -54,7 +54,6 @@ hr{
 .cat-header-name{
 	padding-top: 5px;
 	padding-bottom: 10px;
-	background: url('../img/cate1.jpg') no-repeat;
 }
 .see-more{
 	margin-top: 14px;
@@ -96,15 +95,18 @@ hr{
 .content{
     min-height: 441px;
 }
+.btn-google-plus {
+    margin-top: 14px;
+    color: white;
+    background-color: #DB4437;
+}
 .bottom_border{
 	border-bottom-style: solid;
 	border-bottom-color: #D4D4D4;
 	border-bottom-width: 1px;
 }
-.btn-google-plus {
-    margin-top: 14px;
-    color: white;
-    background-color: #DB4437;
+.login-admin{
+    margin-top: 30px;
 }
 /***end container ***/
 /*** Footer ***/
@@ -112,3 +114,30 @@ hr{
 	background: url("../img/bgft.jpg") repeat-x scroll center top #04a6c4;
 }
 /***end Footer ***/
+
+/**acticles*/
+.acticle{
+    border-color: #d4d4d4;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    height: 150px;
+    margin-bottom: 1px;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding: 3px;
+    width: 450px;
+    border-radius: 7px;
+}
+.acticle img{
+    float: left;
+    height: 140px;
+    margin-right: 10px;
+    width: 225px;
+}
+.acticle .date{
+    color: #999;
+    font-family: Arial;
+    font-size: 13px;
+    text-decoration: none; 
+}

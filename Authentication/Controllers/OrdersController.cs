@@ -10,7 +10,18 @@ namespace Authentication.Controllers
 {
     [RoutePrefix("api/Orders")]
     public class OrdersController : ApiController
-    {        
+    {
+        #region Helper
+        public HttpResponseMessage CreateResponse<T>(HttpStatusCode statusCode, T data)
+        {
+            return Request.CreateResponse(statusCode, data);
+        }
+
+        public HttpResponseMessage CreateResponse(HttpStatusCode httpStatusCode)
+        {
+            return Request.CreateResponse(httpStatusCode);
+        }
+        #endregion
         [Authorize(Roles="Admin")]
         [Route("")]
         public IHttpActionResult Get()
@@ -23,6 +34,21 @@ namespace Authentication.Controllers
             }
             return Ok(OrderList);
         }
+        [Authorize]
+        [HttpGet]
+        [Route("GetUserOrder")]
+        public IHttpActionResult GetUserOrder()
+        {
+            List<ORDER> OrderList = new List<ORDER>();
+            using (MobileStoreServiceEntities data = new MobileStoreServiceEntities())
+            {
+                OrderList = (from e in data.ORDERS
+                             where e.USERNAME == User.Identity.Name
+                             select e).ToList();
+            }
+            return Ok(OrderList);
+        }
+
         [Authorize]
         [HttpPost]
         [Route("Submit")]
@@ -52,6 +78,63 @@ namespace Authentication.Controllers
             }
             return Ok();
         }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet]
+        [Route("OrderDetail")]
+        public HttpResponseMessage OrderDetail(int id)
+        {
+            List<OrderDetailViewModel> kq = new List<OrderDetailViewModel>();
+            using (MobileStoreServiceEntities db = new MobileStoreServiceEntities())
+            {
+                List<ORDER_DETAILS> ords = db.ORDER_DETAILS.Where(o => o.ORDER_ID == id).ToList();
+                foreach (var item in ords)
+                {
+                    OrderDetailViewModel ord = new OrderDetailViewModel();
+                    ord.Name = getProductName(item.PRODUCT_ID, db);
+                    ord.Quantity = item.QUANTITY;
+                    ord.Price = item.UNIT_PRICE;
+
+                    kq.Add(ord);
+                }
+            }
+            return CreateResponse(HttpStatusCode.OK, kq);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
+        [Route("Remove")]
+        public HttpResponseMessage Remove(int id)
+        {
+            using (MobileStoreServiceEntities db = new MobileStoreServiceEntities())
+            {
+                ORDER o = db.ORDERS.FirstOrDefault(or => or.ORDER_ID == id);
+                o.DELETED = 1;
+                db.SaveChanges();
+            }
+            return CreateResponse(HttpStatusCode.OK);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
+        [Route("Paid")]
+        public HttpResponseMessage Paid(int id)
+        {
+            using (MobileStoreServiceEntities db = new MobileStoreServiceEntities())
+            {
+                ORDER o = db.ORDERS.FirstOrDefault(or => or.ORDER_ID == id);
+                o.PAID = 1;
+                db.SaveChanges();
+            }
+            return CreateResponse(HttpStatusCode.OK);
+        }
+
+        private string getProductName(int id, MobileStoreServiceEntities db)
+        {
+            PRODUCT p = db.PRODUCTs.FirstOrDefault(s => s.PRODUCT_ID == id);
+            return p.MODEL;
+        }
+
         private bool CreateOrder(ORDER order, SubmitOrderModel data)
         {
             MobileStoreServiceEntities db = new MobileStoreServiceEntities();

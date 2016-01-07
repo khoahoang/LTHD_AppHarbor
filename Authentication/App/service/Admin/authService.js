@@ -1,5 +1,5 @@
 ﻿'use strict';
-mobileStoreApp.factory('authService', ['$http', '$q', 'localStorageService', 'ngAuthSettings', function ($http, $q, localStorageService, ngAuthSettings) {
+appAdmin.factory('authService', ['$http', '$q', 'localStorageService', 'ngAuthSettings', function ($http, $q, localStorageService, ngAuthSettings) {
  
     var serviceBase = 'http://localhost:41127/';
     var authServiceFactory = {};
@@ -62,6 +62,8 @@ mobileStoreApp.factory('authService', ['$http', '$q', 'localStorageService', 'ng
             _authentication.userName = "";
             _authentication.useRefreshTokens = false;
             _authentication.role = "";
+
+            location.assign('index.html#/home');
         }
     };
  

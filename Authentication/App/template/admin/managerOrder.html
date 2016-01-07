@@ -27,9 +27,8 @@
             });
         });
     </script>-->
-
-<div id="update-message">Quản lý đơn đặt hàng</div>
-<table class="table table-condensed">
+<h2>Quản lý đơn đặt hàng</h2>
+<table class="table table-condensed" border="1">
     <thead>
         <tr>
             <th>
@@ -59,27 +58,31 @@
         </tr>
     </thead>
     <tbody>
-        <tr id="row-@item.OrderID">
-            <td>tên khách hàng</td>
-            <td>tên người nhận</td>
-            <td>địa chỉ</td>
-            <td>ngày đặt hàng</td>
-            <td>tổng tiền</td>
-            <td>thanh toán</td>
-            <td>
-                đã thanh toán
+        <tr ng-repeat="x in list" ng-hide="x.DELETED == 1">
+            <td>{{x.USERNAME}}</td>
+            <td>{{x.NAME}}</td>
+            <td>{{x.ADDRESS}}</td>
+            <td>{{x.PHONE}}</td>
+            <td>{{x.ORDER_DATE | date : format : 'shortDate' }}</td>
+            <td>{{x.TOTAL | number}}</td>
+            <td ng-show="x.PAID == 0">
+                Chưa thanh toán
+                <br />
+                <input type="button" class="btn btn-success" value="Thanh toán" ng-click="thanhToan(x.ORDER_ID)" />
             </td>
+            <td ng-show="x.PAID == 1">Đã thanh toán</td>
             <td>
-                <a href="#" class="RemoveLink" style="float:left; text-decoration:none">
+                <a ng-click="xoa(x.ORDER_ID)" class="RemoveLink" style="float:left; text-decoration:none">
                     Xóa
                 </a>
             </td>
             <td>
-                <a href="#/orderDetail">
+                <a href="#/orderDetail/{{x.ORDER_ID}}">
                     Xem chi tiết
                 </a>
             </td>
         </tr>
+
         <!--@foreach (var item in Model)
         {
         <tr id="row-@item.OrderID">

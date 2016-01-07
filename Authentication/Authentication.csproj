@@ -145,6 +145,7 @@
   <ItemGroup>
     <Content Include="App\css\detail-page-style.css" />
     <Content Include="App\css\style.css" />
+    <Content Include="App\css\tabcontent.css" />
     <Content Include="App\img\bgft.jpg" />
     <Content Include="App\img\giohang.jpg" />
     <Content Include="App\img\laptop\lap1.jpg" />
@@ -171,10 +172,14 @@
     <Content Include="App\img\tablet\tab4.png" />
     <Content Include="App\img\v_line.jpg" />
     <Content Include="App\js\admin\homeAdminController.js" />
+    <Content Include="App\js\admin\imgController.js" />
+    <Content Include="App\js\admin\indexController.js" />
     <Content Include="App\js\admin\managerAccount.js" />
     <Content Include="App\js\admin\managerCategory.js" />
     <Content Include="App\js\admin\managerOrder.js" />
     <Content Include="App\js\admin\managerProductController.js" />
+    <Content Include="App\js\admin\managerUserController.js" />
+    <Content Include="App\js\admin\orderDetailController.js" />
     <Content Include="App\js\app.js" />
     <Content Include="App\js\appAdmin.js" />
     <Content Include="App\js\user\AddProductToShoppingCartController.js" />
@@ -182,6 +187,7 @@
     <Content Include="App\js\user\HomeController.js" />
     <Content Include="App\js\user\IndexController.js" />
     <Content Include="App\js\user\LoginController.js" />
+    <Content Include="App\js\user\ManagerAccountController.js" />
     <Content Include="App\js\user\OrdersController.js" />
     <Content Include="App\js\user\ProductDetailController.js" />
     <Content Include="App\js\user\SearchController.js" />
@@ -205,7 +211,6 @@
     <Content Include="App\lib\angular\angular.js" />
     <Content Include="App\lib\bootstrap\css\bootstrap.css" />
     <Content Include="App\lib\bootstrap\js\bootstrap.js" />
-    <Content Include="App\lib\bootstrap\js\ui-bootstrap-tpls.js" />
     <Content Include="App\lib\jquery\jquery-1.11.3.min.js" />
     <Content Include="App\lib\nivo-slider\arrows.png" />
     <Content Include="App\lib\nivo-slider\bullets.png" />
@@ -217,6 +222,8 @@
     <Content Include="App\script\angularjs-local-storage.min.js" />
     <Content Include="App\script\authComplete.js" />
     <Content Include="App\script\loading-bar.min.js" />
+    <Content Include="App\service\Admin\authInterceptorService.js" />
+    <Content Include="App\service\Admin\authService.js" />
     <Content Include="App\service\authInterceptorService.js" />
     <Content Include="App\service\authService.js" />
     <Content Include="App\service\ordersService.js" />
@@ -241,14 +248,17 @@
     <Content Include="App\template\admin\managerEmp.html" />
     <Content Include="App\template\admin\managerOrder.html" />
     <Content Include="App\template\admin\managerProduct.html" />
+    <Content Include="App\template\admin\managerUser.html" />
     <Content Include="App\template\admin\orderDetail.html" />
     <Content Include="App\template\admin\product.html" />
+    <Content Include="App\template\admin\productimg.html" />
     <Content Include="App\template\admin\resetPasswordResult.html" />
     <Content Include="App\template\user\about.html" />
     <Content Include="App\template\user\associate.html" />
     <Content Include="App\template\user\contact.html" />
     <Content Include="App\template\user\home.html" />
     <Content Include="App\template\user\login.html" />
+    <Content Include="App\template\user\managerAccount.html" />
     <Content Include="App\template\user\order.html" />
     <Content Include="App\template\user\productdetail.html" />
     <Content Include="App\template\user\search.html" />
@@ -294,6 +304,7 @@
     <Compile Include="AuthRepository.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CatergoryAdminController.cs" />
     <Compile Include="Controllers\ExtractionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
@@ -301,10 +312,12 @@
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\RefreshTokensController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Controllers\UserManagerAdminController.cs" />
     <Compile Include="Entities\Client.cs" />
     <Compile Include="Entities\RefreshToken.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Models\Acticle.cs" />
+    <Compile Include="Models\AddProductViewModel.cs" />
     <Compile Include="Models\ApplicationTypes.cs" />
     <Compile Include="Models\ATTRIBUTE.cs">
       <DependentUpon>EntitiesModel.tt</DependentUpon>
@@ -315,9 +328,11 @@
     <Compile Include="Models\CATEGORY.cs">
       <DependentUpon>EntitiesModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CategoryViewModel.cs" />
     <Compile Include="Models\CUSTOMER.cs">
       <DependentUpon>EntitiesModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\EditCategoryModel.cs" />
     <Compile Include="Models\EMPLOYEE.cs">
       <DependentUpon>EntitiesModel.tt</DependentUpon>
     </Compile>
@@ -344,6 +359,7 @@
     <Compile Include="Models\ORDER.cs">
       <DependentUpon>EntitiesModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\OrderDetailViewModel.cs" />
     <Compile Include="Models\ORDER_DETAILS.cs">
       <DependentUpon>EntitiesModel.tt</DependentUpon>
     </Compile>
@@ -366,6 +382,7 @@
       <DependentUpon>EntitiesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SubmitOrderModel.cs" />
+    <Compile Include="Models\UploadImgModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\GoogleAuthProvider.cs" />
@@ -412,7 +429,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Infacstructure\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

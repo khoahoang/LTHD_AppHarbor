@@ -1,16 +1,7 @@
-<div class="col-sm-4"/>
+<div class="col-sm-4" />
 <div class="col-sm-4" align="center">
-	<form class="form-login" role="form">
-	    <h2 class="form-login-heading">Đăng ký tài khoản</h2>
-	    <input type="text" class="form-control" placeholder="Tên tài khoản" data-ng-model="registration.userName" required autofocus>
-	    <br/>
-	    <input type="password" class="form-control" placeholder="Mật khẩu" data-ng-model="registration.password" required>
-	    <br/>
-	    <input type="password" class="form-control" placeholder="Nhập lại mật khẩu" data-ng-model="registration.confirmPassword" required>
-	    <br/>
-	    <div data-ng-hide="message == ''" data-ng-class="(savedSuccessfully) ? 'alert alert-success' : 'alert alert-danger'">
-	        {{message}}
-	    </div>
-	</form>
+    <h2>Đăng kí</h2>
+    <button class="btn btn-large btn-google-plus btn-block" type="button" data-ng-click="authExternalProvider('Google')"><i class="fa fa-google-plus"></i> | Connect with Google+</button>
+    <br />    
 </div>
-<div class="col-sm-4"/>
+<div class="col-sm-4" />

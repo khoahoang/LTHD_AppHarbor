@@ -29,8 +29,32 @@
     </script>-->
 
 <h2>Quản lý danh mục</h2>
+<h3>Thêm danh mục</h3>
+<table>
+    <thead>
+        <tr>
+            <th>
+                Tên danh mục
+            </th>
+            <th>
+                Thao tác
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <input class="form-control" ng-model="nameadd" />
+            </td>
+            <td>
+                <input class="btn btn-success" type="button" value="Thêm" ng-click="them()" />
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
 <div id="update-message"> </div>
-<table class="table-condensed">
+<table class="table-condensed" border="1">
     <thead>
         <tr>
             <th>

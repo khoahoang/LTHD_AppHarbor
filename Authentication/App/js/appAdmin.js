@@ -6,7 +6,7 @@ appAdmin.config(['$routeProvider',
       $routeProvider.
           when('/home', {
               templateUrl: 'app/template/admin/home.html',
-              controller: 'HomeAdminController'
+              controller: 'homeAdminController'
           }).
 
           when('/managerProduct', {
@@ -26,11 +26,22 @@ appAdmin.config(['$routeProvider',
 
           when('/managerOrder', {
               templateUrl: 'app/template/admin/managerOrder.html',
-              controller: 'managerOrderController'
+              controller: 'managerOrder'
           }).
 
-          when('/orderDetail', {
-              templateUrl: 'app/template/admin/orderDetail.html'
+          when('/orderDetail/:Id', {
+              templateUrl: 'app/template/admin/orderDetail.html',
+              controller: 'orderDetailController'
+          }).
+
+          when('/productimg/:Id', {
+              templateUrl: 'app/template/admin/productimg.html',
+              controller: 'imgController'
+          }).
+
+          when('/managerUser', {
+              templateUrl: 'app/template/admin/managerUser.html',
+              controller: 'managerUserController'
           }).
 
           otherwise({
@@ -38,4 +49,19 @@ appAdmin.config(['$routeProvider',
           });
   }]);
 
+
+appAdmin.config(function ($httpProvider) {
+    $httpProvider.interceptors.push('authInterceptorService');
+});
+
+var serviceBase = 'http://localhost:41127/';
+//var serviceBase = 'http://ngauthenticationapi.azurewebsites.net/';
+appAdmin.constant('ngAuthSettings', {
+    apiServiceBaseUri: serviceBase,
+    clientId: 'ngAuthApp'
+});
+
+appAdmin.run(['authService', function (authService) {
+    authService.fillAuthData();
+}]);
 

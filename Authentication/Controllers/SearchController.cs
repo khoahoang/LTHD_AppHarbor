@@ -18,7 +18,7 @@ namespace Authentication.Controllers
             int pageNumber = (page ?? 1);
 
             MobileStoreServiceEntities sv = new MobileStoreServiceEntities();
-            List<PRODUCT> lstProduct = sv.PRODUCTs.Where(x => x.MODEL.Contains(keyword)).ToList();
+            List<PRODUCT> lstProduct = sv.PRODUCTs.Where(x => x.MODEL.Contains(keyword) && x.DELETED == 0).ToList();
             int totalPages = lstProduct.Count/pageSize + 1;
 
             var result = new

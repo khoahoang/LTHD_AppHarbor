@@ -26,11 +26,15 @@
         <p></p>
         <div ng-repeat="x in pro | orderBy : orderList">
             <div class="product">
-                <img src="./{{x.PRODUCT_IMG}}" alt="hinh anh">
-                <a href="index.html#/productdetail/{{x.PRODUCT_ID}}">
-                    <p class="product-name">{{x.MODEL}}</p>
-                </a>
-                <p class="price">{{x.PRICE | number}}</p>
+                <div class="product-img">
+                    <img src="./{{x.PRODUCT_IMG}}" alt="hinh anh">
+                </div>
+                <div class="product-info">
+                    <a href="index.html#/productdetail/{{x.PRODUCT_ID}}">
+                        <p class="product-name">{{x.MODEL}}</p>
+                    </a>
+                    <p class="price">{{x.PRICE | number}}</p>
+                </div>
             </div>
         </div>
     </div>

@@ -1,19 +1,21 @@
 'use strict';
 mobileStoreApp.controller('LoginController', ['$scope', '$location', 'authService', 'ngAuthSettings', function ($scope, $location, authService, ngAuthSettings) {
- 
+
+    $scope.isAdmin = false;
+
     $scope.loginData = {
         userName: "",
         password: ""
     };
- 
+
     $scope.message = "";
- 
+
     $scope.login = function () {
- 
+
         authService.login($scope.loginData).then(function (response) {
- 
-            $location.path('/contact');
- 
+
+            window.location.assign('index-admin.html#/home');
+
         },
          function (err) {
              $scope.message = err.error_description;
@@ -63,5 +65,5 @@ mobileStoreApp.controller('LoginController', ['$scope', '$location', 'authServic
 
         });
     }
- 
+
 }]);

@@ -17,12 +17,9 @@
 <h2>Chi tiết hóa đơn</h2>
 <div class="container">
     <section id="OrderDetail">
-        <table class="table-striped">
+        <table class="table-striped" border="1">
             <thead>
                 <tr>
-                    <th>
-                        Mã sản phẩm
-                    </th>
                     <th style="padding-bottom:5px;padding-left:23px;">
                         Tên sản phẩm
                     </th>
@@ -32,41 +29,43 @@
                     <th style="padding-bottom:5px;padding-left:23px;">
                         Số lượng
                     </th>
+                    <th style="padding-bottom:5px;padding-left:23px;">
+                        Tổng
+                    </th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>ID</td>
-                    <td style="padding-bottom:5px;padding-left:23px;">MODEL</td>
-                    <td style="padding-bottom:5px;padding-left:23px;">PRICE</td>
-                    <td style="padding-bottom:5px;padding-left:23px;">QUANTITY</td>
+                <tr ng-repeat="y in detail">
+                    <td>
+                        {{y.Name}}
+                    </td>
+                    <td style="text-align: right">
+                        {{y.Price | number}}
+                    </td>
+                    <td style="text-align: right">
+                        {{y.Quantity}}
+                    </td>
+                    <td style="text-align: right">
+                        {{y.Total | number}}
+                    </td>
                 </tr>
-                <!--@foreach (ORDER_DETAILS item in Model.ListOrderDetail)
-                {
-                <tr>
-                    <td>@item.PRODUCT.MODEL_ID</td>
-                    <td style="padding-bottom:5px;padding-left:23px;">@item.PRODUCT.MODEL</td>
-                    <td style="padding-bottom:5px;padding-left:23px;">@item.UNIT_PRICE</td>
-                    <td style="padding-bottom:5px;padding-left:23px;">@item.QUANTITY</td>
-                </tr>
-                }-->
             </tbody>
         </table>
     </section>
 
     <div class="row" style="margin-top:20px">
-        <div class="col-md-2">
-            <input id="Reverse" type="hidden" value="/Admin/ReverseOrder?OrderID=@Model.OrderID" />
+        <!--<div class="col-md-2">
+            <input id="Reverse" type="hidden" />
             <div class="form-group">
                 <input type="button" value="chưa thanh toán" onclick="thanhtoan()"/>
             </div>
-        </div>
+        </div>-->
 
-        <div class="col-md-2">
+        <!--<div class="col-md-2">
             <div class="form-group">
                 <input type="submit" value="Trở về" class="btn btn-default" onclick="goBack()" />
             </div>
-        </div>
+        </div>-->
     </div>
 
 </div>

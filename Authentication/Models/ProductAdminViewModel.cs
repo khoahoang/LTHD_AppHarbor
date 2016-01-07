@@ -9,5 +9,6 @@ namespace Authentication.Models
     {
         public List<ProductSModel> Products { get; set; }
         public List<MANUFACTURE> Mans { get; set; }
+        public List<CATEGORY> Cats { get; set; }
     }
 }

@@ -7,11 +7,12 @@
         data = response.data;
         $scope.list = data.Products;
         $scope.mans = data.Mans;
+        $scope.cats = data.Cats;
         $scope.totalItems = data.Products.length;
     })
 
     $scope.pageChanged = function () {
-        
+
     }
 
     $scope.editItem = function (item) {
@@ -21,7 +22,7 @@
     $scope.doneEditing = function (item) {
         item.Editing = false;
         //dong some background ajax calling for persistence...
-        $http.post('http://localhost:41127/api/ProductAdmin/EditProduct?id=' + item.ID + '&name=' + item.Name + '&man=' + item.NSX + '&price=' + item.Price)
+        $http.post('http://localhost:41127/api/ProductAdmin/EditProduct?id=' + item.ID + '&name=' + item.Name + '&cat=' + item.Category + '&man=' + item.NSX + '&price=' + item.Price)
         .then(function (response) {
 
         })
@@ -37,5 +38,29 @@
                 data.Products.splice(index, 1);
             })
         }
+    }
+
+    $scope.them = function () {
+        var name = $scope.nameadd;
+        var price = $scope.priceadd;
+        var man = $scope.manadd;
+        var cat = $scope.catadd;
+        var params = { 'Name': name, 'Price': price, 'Category': cat, 'NSX': man };
+        $http.post('http://localhost:41127/api/productadmin/addproduct', params)
+        .then(function (response) {
+            $http.get('http://localhost:41127/api/productadmin/getall')
+            .then(function (response2) {
+                data = response2.data;
+                $scope.list = data.Products;
+                $scope.totalItems = data.Products.length;
+            })
+
+            $scope.nameadd = "";
+            $scope.priceadd = "";
+            $scope.manadd = "";
+            $scope.catadd = "";
+
+            window.alert('Thêm thành công');
+        })
     }
 })

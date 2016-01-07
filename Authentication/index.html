@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="app/lib/nivo-slider/nivo-slider.css" type="text/css">
     <link rel="stylesheet" href="app/css/style.css" type="text/css">
     <link rel="stylesheet" href="app/css/detail-page-style.css" type="text/css">
+    <link rel="stylesheet" href="app/css/tabcontent.css" type="text/css">
 
     <!-- Add jQuery library -->
     <script type="text/javascript" src="app/lib/jquery/jquery-1.11.3.min.js"></script>
@@ -21,7 +22,7 @@
     <script type="text/javascript" src="app/lib/angular/angular-route.js"></script>
     <script type="text/javascript" src="app/script/angularjs-local-storage.min.js"></script>
     <script type="text/javascript" src="app/script/loading-bar.min.js"></script>
-    <script type="text/javascript" src="app/lib/bootstrap/js/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="app/lib/bootstrap/js/ui-bootstrap-tpls-0.14.3.min.js"></script>
 
     <!-- Add main app -->
     <script type="text/javascript" src="app/js/app.js"></script>
@@ -93,8 +94,7 @@
                                     @Html.ActionLink("Đăng nhập", "Login", "Account")
                                 }-->
                                    <a ng-hide="!authentication.isAuth" href="#">{{authentication.userName}}</a>
-                                   <a ng-hide="authentication.isAuth" href="index.html#/signup">Đăng kí</a>
-                                    <span> | </span>
+                                   <a ng-hide="authentication.isAuth" href="index.html#/signup">Đăng kí</a> |
                                    <a ng-hide="authentication.isAuth" href="index.html#/login">Đăng nhập</a>
                                    <a ng-hide="!authentication.isAuth" ng-click="logOut()">Đăng xuất</a>
                                 </b>

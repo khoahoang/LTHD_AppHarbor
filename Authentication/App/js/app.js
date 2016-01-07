@@ -73,8 +73,8 @@ mobileStoreApp.config(['$routeProvider',
   }]);
 
 
-//var serviceBase = 'http://localhost:41127/';
-var serviceBase = 'http://mobilestore.apphb.com/';
+var serviceBase = 'http://localhost:41127/';
+//var serviceBase = 'http://ngauthenticationapi.azurewebsites.net/';
 mobileStoreApp.constant('ngAuthSettings', {
     apiServiceBaseUri: serviceBase,
     clientId: 'ngAuthApp'

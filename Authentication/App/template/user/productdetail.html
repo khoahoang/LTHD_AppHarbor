@@ -12,25 +12,16 @@
     </div>
     <div class="col-xs-12 col-sm-8 col-md-8">
         <div class="row top_border" style="padding: 10px 0px;">
-            <!-- <p><span style="color: #3399FF;">Nhà sản xuất:</span> @Model.Manufacture.MANUFACTURE_NAME</p>
-            <p><span style="color: #3399FF;">Mã sản phẩm:</span> @Model.Product.MODEL_ID</p>
-            <p style="color: red;"><span style="color: #3399FF;">Tình trạng:</span> @Model.Status</p> -->
             <p><span style="color: #3399FF;">Nhà sản xuất:</span> {{pro.NSX}}</p>
             <p><span style="color: #3399FF;">Mã sản phẩm:</span> {{pro.product.MODEL_ID}}</p>
             <p style="color: red;"><span style="color: #3399FF;">Tình trạng:</span> {{pro.Status}}</p>
         </div>
         <div class="row top_border" style="padding: 10px 0px;">
-            <!-- <b style="color: red;">Giá: @Model.Product.PRICE VND (Đã có VAT)</b> -->
             <b style="color: red;">Giá: {{pro.product.PRICE | number}} VND (Đã có VAT)</b>
         </div>
-        <!-- @if(@Model.Product.QUANTITY > 0)
-        {
-            <p class="button">
-                @Html.ActionLink("Thêm vào giỏ hàng", "AddToCart", "ShoppingCart", new { id = Model.Product.PRODUCT_ID }, "")
-            </p>
-        } -->
 
         <p class="button">
+            <img src="Content/images/giohang.jpg" />
             <a href="index.html#/addproduct/{{pro.product.PRODUCT_ID}}">Thêm vào giỏ hàng</a>
         </p>
 

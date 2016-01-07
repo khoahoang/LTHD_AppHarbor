@@ -42,4 +42,13 @@
             </div>
         </div>
     </div>
+    <div ng-repeat="x in acticle">
+        <div class="acticle">
+            <a href="{{x.Url}}" target="_blank"><img src="{{x.Image}}" title="{{x.Head}}"></a>
+            <a href="{{x.Url}}">"{{x.Title}}"</a>
+            <div class="date">
+                {{x.Date}}
+            </div>
+        </div>
+    </div>    
 </div>

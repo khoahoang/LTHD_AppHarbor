@@ -25,6 +25,14 @@ namespace MobileSt.Controllers
             return Request.CreateResponse(httpStatusCode);
         }
         #endregion
+        [Authorize(Roles = "Admin")]
+        [HttpGet]
+        [Route("api/home/getadmin")]
+        public HttpResponseMessage GetAdmin()
+        {
+            return CreateResponse(HttpStatusCode.OK);
+        }
+
         [HttpGet]
         public HttpResponseMessage index()
         {
@@ -44,7 +52,7 @@ namespace MobileSt.Controllers
                     List<PRODUCT> listProduct = new List<PRODUCT>();
                     temp.listProduct = (from e in data.PRODUCTs
                                         join f in data.PRODUCT_CATEGORY on e.PRODUCT_ID equals f.PRODUCT_ID
-                                        where f.CATEGORY_ID == cat_id
+                                        where f.CATEGORY_ID == cat_id && e.DELETED == 0
                                         select e).Take(5).ToList();
 
                     pc.Add(temp);
