@@ -4,7 +4,7 @@
         var pass = $scope.pass;
         var passconfirm = $scope.passconfirm;
         var params = { 'UserName': username, 'Password': pass, 'ConfirmPassword': passconfirm };
-        $http.post('http://localhost:41127/api/account/register', params)
+        $http.post('http://mobilestore.apphb.com/api/account/register', params)
         .then(function (response) {
             $scope.nameadd = "";
             $scope.pass = "";

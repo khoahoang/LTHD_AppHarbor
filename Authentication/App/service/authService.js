@@ -1,7 +1,7 @@
 ﻿'use strict';
 mobileStoreApp.factory('authService', ['$http', '$q', 'localStorageService', 'ngAuthSettings', function ($http, $q, localStorageService, ngAuthSettings) {
  
-    var serviceBase = 'http://localhost:41127/';
+    var serviceBase = 'http://mobilestore.apphb.com/';
     var authServiceFactory = {};
  
     var _authentication = {

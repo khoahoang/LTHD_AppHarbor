@@ -2,7 +2,7 @@
     $scope.currentPage = 1;
     var data;
 
-    $http.get('http://localhost:41127/api/productadmin/getall')
+    $http.get('http://mobilestore.apphb.com/api/productadmin/getall')
     .then(function (response) {
         data = response.data;
         $scope.list = data.Products;
@@ -22,7 +22,7 @@
     $scope.doneEditing = function (item) {
         item.Editing = false;
         //dong some background ajax calling for persistence...
-        $http.post('http://localhost:41127/api/ProductAdmin/EditProduct?id=' + item.ID + '&name=' + item.Name + '&cat=' + item.Category + '&man=' + item.NSX + '&price=' + item.Price)
+        $http.post('http://mobilestore.apphb.com/api/ProductAdmin/EditProduct?id=' + item.ID + '&name=' + item.Name + '&cat=' + item.Category + '&man=' + item.NSX + '&price=' + item.Price)
         .then(function (response) {
 
         })
@@ -31,7 +31,7 @@
     $scope.xoa = function (item) {
         var r = confirm("Xác nhận xóa!")
         if (r == true) {
-            $http.post('http://localhost:41127/api/productadmin/remove?id=' + item.ID)
+            $http.post('http://mobilestore.apphb.com/api/productadmin/remove?id=' + item.ID)
             .then(function (response) {
                 window.alert('Xóa thành công');
                 var index = data.Products.indexOf(item);
@@ -46,9 +46,9 @@
         var man = $scope.manadd;
         var cat = $scope.catadd;
         var params = { 'Name': name, 'Price': price, 'Category': cat, 'NSX': man };
-        $http.post('http://localhost:41127/api/productadmin/addproduct', params)
+        $http.post('http://mobilestore.apphb.com/api/productadmin/addproduct', params)
         .then(function (response) {
-            $http.get('http://localhost:41127/api/productadmin/getall')
+            $http.get('http://mobilestore.apphb.com/api/productadmin/getall')
             .then(function (response2) {
                 data = response2.data;
                 $scope.list = data.Products;

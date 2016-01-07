@@ -1,7 +1,7 @@
 'use strict';
 mobileStoreApp.factory('ordersService', ['$http', 'localStorageService', function ($http, localStorageService) {
  
-    var serviceBase = 'http://localhost:41127/';
+    var serviceBase = 'http://mobilestore.apphb.com/';
     var ordersServiceFactory = {};
  
     var _getOrders = function () {
