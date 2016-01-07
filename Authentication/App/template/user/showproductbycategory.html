@@ -24,7 +24,7 @@
     </div>
     <div class="content row">
         <p></p>
-        <div ng-repeat="x in pro | orderBy : orderList">
+        <div ng-repeat="x in pro | orderBy : orderList" ng-hide="x.DELETED == 1">
             <div class="product">
                 <div class="product-img">
                     <img src="./{{x.PRODUCT_IMG}}" alt="hinh anh">

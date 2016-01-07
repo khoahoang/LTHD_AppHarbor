@@ -48,6 +48,7 @@ mobileStoreApp.controller('ShoppingCartController', ['$scope', '$http', 'shoppin
             $http.post('http://localhost:41127/api/orders/submit', data).then(function (response) {
                 $scope.listProduct = shoppingService.clear();
                 $scope.All = 0;
+                $scope.count = 0;
                 $scope.name = "";
                 $scope.addr = "";
                 $scope.phone = "";

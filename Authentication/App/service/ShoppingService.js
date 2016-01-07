@@ -2,8 +2,8 @@
 mobileStoreApp.factory('shoppingService', ['localStorageService', function (localStorageService) {
 
     var shopping = {};
-    var list = localStorageService.get('dataShopping');
     var _count = function () {
+        var list = localStorageService.get('dataShopping');
         var sum = 0;
         for (var i = 0; i < list.length; i++) {
             sum = sum + list[i].Quantity;
@@ -12,7 +12,8 @@ mobileStoreApp.factory('shoppingService', ['localStorageService', function (loca
         return sum;
     }
 
-    var _get = function(){
+    var _get = function () {
+        var list = localStorageService.get('dataShopping');
         return list;
     }
 
@@ -20,7 +21,8 @@ mobileStoreApp.factory('shoppingService', ['localStorageService', function (loca
         localStorageService.set('dataShopping', value);
     }
 
-    var _getAll = function() {
+    var _getAll = function () {
+        var list = localStorageService.get('dataShopping');
         var all = 0;
         for (var index = 0; index < list.length; index++) {
             all = list[index].PriceDouble * list[index].Quantity + all;
@@ -30,6 +32,7 @@ mobileStoreApp.factory('shoppingService', ['localStorageService', function (loca
     }
 
     var _tang = function (id) {
+        var list = localStorageService.get('dataShopping');
         for (var index = 0; index < list.length; index++) {
             if (list[index].ID == id) {
                 list[index].Quantity++;
@@ -42,6 +45,7 @@ mobileStoreApp.factory('shoppingService', ['localStorageService', function (loca
     }
 
     var _giam = function (id) {
+        var list = localStorageService.get('dataShopping');
         for (var index = 0; index < list.length; index++) {
             if (list[index].ID == id) {
                 if (list[index].Quantity > 1) {
@@ -60,6 +64,7 @@ mobileStoreApp.factory('shoppingService', ['localStorageService', function (loca
     }
 
     var _them = function (pro) {
+        var list = localStorageService.get('dataShopping');
         var proID = pro.product.PRODUCT_ID;
         var modelProduct = pro.product.MODEL;
         var priceDouble = pro.product.PRICE;
@@ -87,6 +92,8 @@ mobileStoreApp.factory('shoppingService', ['localStorageService', function (loca
     var _clear = function () {
         var items = [];
         localStorageService.set('dataShopping', items);
+
+        return items;
     }
 
     shopping.get = _get;
